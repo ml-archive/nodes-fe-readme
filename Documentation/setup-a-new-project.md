@@ -1,6 +1,6 @@
 # Setup a new project
 
-Depending on which project you are starting on you can follow these instructions, assuming that you have already read [setup your machine](Documentation/setup-your-machine.md).
+Depending on which project you are starting on you can follow these instructions, assuming that you have already read [setup your machine](setup-your-machine.md).
 
 ## Framework
 
@@ -22,7 +22,7 @@ react-native init NameOfProject
 ```
 > :exclamation: We do **not** use `create-react-native-app` as we will be building, deploying and adding native code in all Nodes projects.
 
-We will soon create a template with a set of packages and configurations, which can be used for future ReactJS projects.
+We will soon create a template with a set of packages and configurations, which can be used for future React Native projects.
 
 ## Github
 
