@@ -1,5 +1,7 @@
 # Style Guide
 
+The intention of this document is to guide how we should write JavaScript and CSS/SASS at Nodes. The document should be considered as work-in-progress and PR's with corrections etc. are much appreciated.
+
 ## Table of Contents
 - [Language](#Language)
 - [JavaScript Style Guide](#JavaScript-Style-Guide)
