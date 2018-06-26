@@ -6,9 +6,13 @@ Welcome to Frontend team at Nodes :wave:
 Feel free to get in touch or to submit a PR to any of our repos.
 
 ## Documentation
-- :computer: Fist day 
+:computer: **First day**
   - [Setup your machine](Documentation/setup-your-machine.md)
-- ✍️ Creating a project
+
+
+✍️ **Creating a project**
   - [Setup a new project](Documentation/setup-a-new-project.md)
-- :sunflower: Syntax, semantics and structure
+  
+
+:sunflower: **Syntax, semantics and structure**
   - [Style Guide](Documentation/style-guide.md)
