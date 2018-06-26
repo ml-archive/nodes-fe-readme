@@ -3,10 +3,11 @@
 This guide will walk your through the tools you need to install in order to start developing.
 
 ## Yarn and Node.js
-At Nodes, we use Yarn as our package manager, which is Facebook's version of npm -> it's faster and it uses less space - hurray :tada:
+At Nodes, we use Yarn as our package manager, which is Facebook's version of npm -> it's faster and it uses less space - hurray :tada:.
+
 You’ll need to have Node >= 8 on your local development machine, but don't worry it will be installed automatically together with Yarn.
 
-Use Homebrew to install yarn ([Need to install Homebrew?](https://brew.sh/))
+Use Homebrew to install Yarn ([Need to install Homebrew?](https://brew.sh/))
 
 ```
 brew install yarn
@@ -15,10 +16,10 @@ brew install yarn
 If you are not familiar with Yarn, then have a look at their documentation: [https://yarnpkg.com/en/docs](https://yarnpkg.com/en/docs).
 
 ## VSCode or PHPStorm
-We prefer to use VSCode or PHPStorm, but if you prefer another code editor then talk with [Themi](https://nodes.slack.com/messages/@thpf). 
-VSCode can be downloaded for free, but you will need a license for PHPStorm so ask [Jacob](https://nodes.slack.com/messages/@jafr) for that.
+We prefer to use VSCode or PHPStorm, so you can install whichever you prefer, however if you prefer another code editor then talk with [Themi](https://nodes.slack.com/messages/@thpf). 
+VSCode can be downloaded for free, but you will need a license for PHPStorm which [Jacob](https://nodes.slack.com/messages/@jafr) can help you with.
 
-I'm preparing an export of settings/plugins for both editors, which will be uploaded here when ready.
+An export of settings/plugins for both editors are currently being investigated, which will be uploaded here when ready.
 
 
 ## Browser
