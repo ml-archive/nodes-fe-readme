@@ -14,7 +14,7 @@ Use US English spelling to be consistent with the other dev teams.
 
 ## JavaScript Style Guide
 
-We are following the [JavaScript Style Guide by Airbnb](https://github.com/airbnb/javascript) 
+We are following the [JavaScript Style Guide by Airbnb](https://github.com/airbnb/javascript) .
 
 ## React JS & React Native Style Guide
 
@@ -58,9 +58,11 @@ Elements can have more general names, as they are nested in the block, and there
 
 In order to follow the guidelines, we use ESLint together with the `prettier` and `prettier-eslint`, which on save will automatically format your code or highlight any violations you might have made.
 
+A configuration file for ESLint will be made soon.
+
 ## Flow
 
-As JavaScript a dynamic, weakly typed language, it is prone to errors as they are first revealed at compile time. To mitigate that, we are using [Flow](https://flow.org/), which is a static type checker for JS made by Facebook. It can be added to VSCode and PHPStorm, so it can provide you realtime feedback, thus help us find bugs and errors, before we ship it. In addition, Flow helps when another frontender will move to a new project, as the Component property types and function parameter types will be clearly stated.
+As JavaScript is a dynamic, weakly typed language, it is prone to errors as they are first revealed at compile time. To mitigate that, we are using [Flow](https://flow.org/), which is a static type checker for JS made by Facebook. It can be added to VSCode and PHPStorm, so it can provide you realtime feedback, thus help us find bugs and errors, before we ship it. In addition, Flow helps when another frontender will move to a new project, as the Component property types and function parameter types will be clearly stated.
 
 
 ## Out-Commented Code
