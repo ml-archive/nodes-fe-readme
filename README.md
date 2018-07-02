@@ -16,3 +16,6 @@ Feel free to get in touch or to submit a PR to any of our repos.
 
 :sunflower: **Syntax, semantics and structure**
   - [Style Guide](Documentation/style-guide.md)
+  
+:wrench: **Debugging Tools**
+  - [Debuggers](Documentation/debugging.md)
