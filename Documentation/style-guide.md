@@ -3,12 +3,12 @@
 The intention of this document is to guide how we should write JavaScript and CSS/SASS at Nodes. The document should be considered as work-in-progress and PR's with corrections etc. are much appreciated.
 
 ## Table of Contents
-- [Language](#Language)
-- [JavaScript Style Guide](#JavaScript-Style-Guide)
-- [React JS & React Native Style Guide](#React-JS-&-React-Native-Style-Guide)
-- [CSS / SASS](#CSS-/-SASS)
-- [ESLint](#ESLint)
-- [Flow](#Flow)
+- [Language](#language)
+- [JavaScript Style Guide](#javascript-style-guide)
+- [React JS & React Native Style Guide](#react-js--react-native-style-guide)
+- [CSS / SASS](#css--sass)
+- [ESLint](#eslint)
+- [Flow](#flow)
 
 ## Language
 
