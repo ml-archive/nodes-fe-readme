@@ -121,7 +121,7 @@ store/
 ```
 
 
-### Style
+### Styles
 Global styling and configurations will be added to this folder. If the project uses Sass, then it will also contain the theme colors, breakpoints and fonts.
 
 
