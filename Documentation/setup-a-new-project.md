@@ -6,7 +6,7 @@ Depending on which project you are starting on you can follow these instructions
 
 ### ReactJS
 
-For new ReactJS projects we use [Create React App](https://github.com/facebook/create-react-app) so we have a minimum of configurations. 
+For new ReactJS projects we use [Create React App](https://github.com/facebook/create-react-app) so we have a minimum of configurations.
 
 We will soon create a template with a set of packages and configurations, which can be used for future ReactJS projects.
 
@@ -17,10 +17,12 @@ Projects will be created by following [VueJS documentation](https://vuejs.org/v2
 ### React Native
 
 New React Native projects will be generated using the react-native-cli:
-```
+
+```console
 react-native init NameOfProject
 ```
-> :exclamation: We do **not** use `create-react-native-app` as we will be building, deploying and adding native code in all Nodes projects.
+
+> :exclamation: We do **not** use `create-react-native-app` as we will be building, deploying and adding native code in all React Native projects.
 
 We will soon create a template with a set of packages and configurations, which can be used for future React Native projects.
 
