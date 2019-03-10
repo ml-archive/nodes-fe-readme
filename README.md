@@ -21,6 +21,7 @@ Feel free to get in touch or to submit a PR to any of our repos.
 
 - [Style Guide](Documentation/style-guide.md)
 - [Folder Structure](Documentation/folder-structure.md)
+- [Testing](Documentation/how-to-test.md)
   
 :wrench: **Debugging Tools**
 
