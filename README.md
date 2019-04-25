@@ -26,3 +26,8 @@ Feel free to get in touch or to submit a PR to any of our repos.
 :wrench: **Debugging Tools**
 
 - [Debuggers](Documentation/debugging.md)
+
+:pencil2: **Useful Pens**
+
+- [React - Simple Portal Modal](https://codepen.io/geekonthemove/pen/wZQVwz)
+- [React - Conditional rendering with Enum](https://codepen.io/themitvp/pen/ZZmmeK)
