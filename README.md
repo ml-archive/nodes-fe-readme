@@ -31,3 +31,5 @@ Feel free to get in touch or to submit a PR to any of our repos.
 
 - [React - Simple Portal Modal](https://codepen.io/geekonthemove/pen/wZQVwz)
 - [React - Conditional rendering with Enum](https://codepen.io/themitvp/pen/ZZmmeK)
+- [React - Error Boundaries](https://codepen.io/geekonthemove/pen/Jqrgxp)
+- [Hash table index for objects](https://codepen.io/geekonthemove/pen/ZNJqEv)
