@@ -101,6 +101,7 @@ Don't leave out-commented code in the project. Or if you feel you really need to
 ## Example of Simple React Component
 
 This component is stateless and simply just rendering a title. The comments starting with `ONLY FOR EXAMPLE:` is only added for explanation and should not be present in the actual code, where you should only have relevant comments about the implementation.
+TODO: Write about why we export named function/class instead of default
 
 ```jsx
 // @flow
@@ -144,7 +145,7 @@ class Header extends Component<Props> {
   }
 }
 
-export default Header;
+export { Header };
 ```
 
 ## Example of Redux React Component
