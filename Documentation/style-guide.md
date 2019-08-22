@@ -74,7 +74,7 @@ We use [CSS Modules](https://github.com/css-modules/css-modules), so it is not n
 ```jsx
 <div className={styles.container}>
   <div className={styles.card}></div>
-  <button className={cx(styles.container, { styles.active: isActive })}></button>
+  <button className={cx(styles.button, { styles.active: isActive })}></button>
 </div>
 ```
 
