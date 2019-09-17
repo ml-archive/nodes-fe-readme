@@ -11,7 +11,7 @@ The intention of this document is to guide how we should write JavaScript and CS
 - [ESLint](#eslint)
 - [Flow](#flow)
 - [Out-Commented Code](#out-commented-code)
-- [Example of Creating React Component](#example-of-creating-react-component)
+- [Example of React Components](#example-of-simple-react-component)
 
 ## Language
 
