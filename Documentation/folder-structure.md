@@ -21,7 +21,7 @@ app/
 - [storybook/](#storybook)
 - [styles/](#styles)
 - [types/](#types)
-- [utils/](#utils)
+- [configs/](#configs)
 
 public/
 
@@ -231,7 +231,7 @@ export type UserType = {
 
 This allows Flow to highlight if any attribute types are violated or missing from the type declaration.
 
-#### Utils
+#### Configs
 
 The global constants and enums are defined in this folder. For example, an event status could be defined as following:
 
