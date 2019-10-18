@@ -11,10 +11,35 @@ You’ll need to have Node >= 8 on your local development machine, but don't wor
 Use Homebrew to install Yarn ([Need to install Homebrew?](https://brew.sh/))
 
 ```console
-brew install yarn
+$ brew install yarn
 ```
 
 If you are not familiar with Yarn, then have a look at their documentation: [https://yarnpkg.com/en/docs](https://yarnpkg.com/en/docs).
+
+# Node Version Manager (nvm)
+
+It is recommended to install nvm, so you can install multiple versions of node.js, and thereby easily use a specific version for a project:
+
+```console
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+```
+
+> docs: https://github.com/nvm-sh/nvm
+
+> install guide (bottom of article) https://medium.com/@isaacjoe/best-way-to-install-and-use-nvm-on-mac-e3a3f6bc494d
+
+To install specific version of node:
+
+```console
+$ nvm install 6.5.0
+$ nvm use 6.5.0
+```
+
+To show all node version:
+
+```console
+$ nvm ls
+```
 
 ## Code Editor
 
@@ -65,8 +90,8 @@ Before committing your code, you should always check that the new changes work a
 You will need Watchman, the React Native command line interface, Xcode, Java Development Kit, and Android Studio.
 
 ```console
-brew install watchman
-yarn global add react-native-cli
+$ brew install watchman
+$ yarn global add react-native-cli
 ```
 
 To install Xcode, JDK, and Android Studio, follow the rest of the instructions from React Native's [documentation](https://facebook.github.io/react-native/docs/getting-started.html).
