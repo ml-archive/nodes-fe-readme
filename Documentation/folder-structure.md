@@ -181,7 +181,7 @@ The `store.js` then imports the models and specifies which models that should be
 ```jsx
 import { init } from "@rematch/core";
 import * as models from "./models/models";
-import createRematchPersist from "@rematch/persist/dist/rematch-persist.cjs";
+import createRematchPersist from "@rematch/persist";
 
 const persistPlugin = createRematchPersist({
   whitelist: ["userModel"],
@@ -199,7 +199,7 @@ export default store;
 
 Here the `userModel` is added to the whitelist as one of the models that should be persisted in the Redux store for offline usage, which means that if the user refreshes or closes the website, and then goes back to the website then the userModel data will still be there. And, as expected, the rest of the data for the other models will be deleted.
 
-#### Storbook
+#### Storybook
 
 If the project will have a [storybook](https://github.com/storybooks/storybook), then components that are only used in the stories, such as wrapper components, will be placed in the `storybook` folder.
 
