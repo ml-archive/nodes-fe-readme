@@ -37,9 +37,9 @@ This folder contains all the API calls for each feature, such as user, event, ar
 
 ```console
 api/
-    articleApi.js
-    eventApi.js
-    userApi.js
+    articleApi.tsx
+    eventApi.tsx
+    userApi.tsx
 ```
 
 As the number of API calls for each feature increases, subfolders with several files could be created to maintain a good overview like shown below.
@@ -47,8 +47,8 @@ As the number of API calls for each feature increases, subfolders with several f
 ```console
 api/
     article/
-        articleGetApi.js
-        articlePostApi.js
+        articleGetApi.tsx
+        articlePostApi.tsx
 ```
 
 #### Components
@@ -65,8 +65,8 @@ Each component can also consist of several subcomponents, which are either only 
 Breadcrumb/
     components/
         BreadcrumbItem/
-            BreadcrumbItem.js
-    Breadcrumb.js
+            BreadcrumbItem.tsx
+    Breadcrumb.tsx
 ```
 
 Here the `BreadcrumbItem` must only be used in the Breadcrumb, simply to reduce complexity of the Breadcrumb file. If this structure is respected, then we know that modifying theses subcomponents, eg. `BreadcrumbItem`, will only affect the parent component. In some cases the subcomponents will also have its own set of subcomponents, where the same logic then applies.
@@ -79,7 +79,7 @@ Icon/
         IconChevron/
         IconClose/
         ...
-    Icon.js
+    Icon.tsx
 ```
 
 Here all the icons in the components folder are exported by the `Icon` component that functions as a [Higher Order Component (HOC)](https://reactjs.org/docs/higher-order-components.html) to reuse as much logic as possible and keep each subcomponent neat and logicless. This means that you will never refer directly to a subcomponent, this also has the advantages that the import path becomes shorter.
@@ -118,8 +118,8 @@ HomeScreen/
     partials/
         HomeSidebarMenu/
     screens/
-        HomeDetailScreen.js
-    HomeScreen.js
+        HomeDetailScreen.tsx
+    HomeScreen.tsx
 ```
 
 The screens can have subcomponents, eg. `HomeHeader` and `HomeHero`, these components are specific for this screen and its subscreens, and are not used in any other screens on the same level. This means, that if `HomeHero` was modified, it would only affect `HomeScreen` and potentially the subscreens, which removes the risk of breaking other screens in the rest of the app.
@@ -133,14 +133,14 @@ If the app uses Redux/Rematch, then this folder will hold the store configuratio
 ```console
 store/
     models/
-        userModel.js
-        eventModel.js
-    store.js
+        userModel.tsx
+        eventModel.tsx
+    store.tsx
 ```
 
 A model will contain the state, reducers to get and set the data, and async effects to fetch data from the API:
 
-```jsx
+```tsx
 export default {
   state: {
     user: {}
@@ -169,16 +169,16 @@ export default {
 };
 ```
 
-The `models.js` only imports and exports the models as an interface, for example:
+The `models.tsx` only imports and exports the models, for example:
 
-```jsx
+```tsx
 export { default as userModel } from "./userModel";
 export { default as eventModel } from "./eventModel";
 ```
 
-The `store.js` then imports the models and specifies which models that should be persisted (offline), for example:
+The `store.tsx` then imports the models and specifies which models that should be persisted (offline), for example:
 
-```jsx
+```tsx
 import { init } from "@rematch/core";
 import * as models from "./models/models";
 import createRematchPersist from "@rematch/persist";
@@ -209,17 +209,17 @@ Global styling and configurations will be added to this folder. If the project u
 
 #### Types
 
-The shared types for [Flow](https://flow.org/) will be added here:
+The shared types for TypeScript will be added here:
 
 ```console
 types/
-    eventType.js
-    userType.js
+    eventType.tsx
+    userType.tsx
 ```
 
 Each file will export the attributes for the feature objects, for example:
 
-```jsx
+```tsx
 export type UserType = {
     id: string,
     name: string,
@@ -229,16 +229,16 @@ export type UserType = {
 };
 ```
 
-This allows Flow to highlight if any attribute types are violated or missing from the type declaration.
+This will allow VSCode TS to highlight if any attribute types are violated or missing from the type declaration.
 
 #### Configs
 
 The global constants and enums are defined in this folder. For example, an event status could be defined as following:
 
-> Do not add any components or logic in here, only simple JS files with constants, enums and configs!
+> Do not add any components or logic in here, only simple files with constants, enums and configs!
 
-```jsx
-export const EventStatus = {
+```tsx
+export enum EventStatus = {
   OPEN: "event-open",
   CLOSED: "event-closed",
   SUSPENDED: "event-suspended"
