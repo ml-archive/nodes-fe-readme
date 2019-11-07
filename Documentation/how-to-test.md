@@ -1,5 +1,7 @@
 # How to test React JS apps
 
+> Currently only for JS, will soon be updated with TypeScript examples.
+
 ## Frameworks
 
 The testing frameworks used for this project:
