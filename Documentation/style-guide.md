@@ -46,6 +46,30 @@ class UserProfile extends Component<Props> {
 export default UserProfile;
 ```
 
+## Importing
+
+When setting up a new project, remember to edit the `tsconfig.json`/`jsconfig.json` file, and add `"baseUrl": "src"` to `compilerOptions`, like so:
+
+```tsx
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  }
+}
+```
+
+This allows us to import modules in a much cleaner way, using absolute paths instead of relative paths.
+
+```tsx
+import Header from "app/components/Header/Header";
+```
+
+Instead of
+
+```tsx
+import Header from "../../../../../../components/Header/Header";
+```
+
 ## TypeScript Style Guide
 
 We are to some extent following the [JavaScript Style Guide by Airbnb](https://github.com/airbnb/javascript).
