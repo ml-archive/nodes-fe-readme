@@ -21,7 +21,7 @@ app/
 - [storybook/](#storybook)
 - [styles/](#styles)
 - [types/](#types)
-- [configs/](#configs)
+- [constants/](#constants)
 
 public/
 
@@ -231,11 +231,11 @@ export type UserType = {
 
 This will allow VSCode TS to highlight if any attribute types are violated or missing from the type declaration.
 
-#### Configs
+#### Constants
 
 The global constants and enums are defined in this folder. For example, an event status could be defined as following:
 
-> Do not add any components or logic in here, only simple files with constants, enums and configs!
+> Do not add any components or logic in here, only simple files with constants and enumss!
 
 ```tsx
 export enum EventStatus = {
