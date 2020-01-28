@@ -76,7 +76,7 @@ import Header from "../../../../../../components/Header/Header";
 
 #### Exceptions (Siblings and Children)
 
-As explained above, we wan to use relative imports when it comes to importing sibling files, or children. For example.
+As explained above, we want to use relative imports when it comes to importing sibling files, or children. For example:
 
 ```tsx
 import styles from "./Header.module.scss";
