@@ -84,7 +84,7 @@ import styles from "./Header.module.scss";
 Or
 
 ```tsx
-import Calender from "./components/Calender/Calender";
+import CalenderHeader from "./components/CalenderHeader/CalenderHeader";
 ```
 
 ### SASS
