@@ -5,12 +5,15 @@ The intention of this document is to guide how we should write TypeScript and CS
 ## Table of Contents
 
 - [Language](#language)
+- [Documentation](#documentation)
+- [Importing](#importing)
 - [TypeScript Style Guide](#typescript-style-guide)
 - [React JS Style Guide](#react-js-style-guide)
 - [CSS Modules & SASS](#css-modules--sass)
 - [ESLint](#eslint)
 - [Out-Commented Code](#out-commented-code)
 - [Example of React Components](#example-of-simple-react-component)
+- [Example of Redux React Component](#example-of-redux-react-component)
 
 ## Language
 
