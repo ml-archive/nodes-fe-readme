@@ -81,7 +81,7 @@ As explained above, we want to use relative imports when it comes to importing s
 ```tsx
 import styles from "./Header.module.scss";
 ```
-Or when import sub-components.
+Or, when importing sub-components.
 
 ```tsx
 import CalenderHeader from "./components/CalenderHeader/CalenderHeader";
