@@ -48,6 +48,10 @@ export default UserProfile;
 
 ## Importing
 
+In order to have our code be much cleaner, more maintainable, and generally easier to write, we want to use absolute imports. Whether it be for our _JavaScript_ / _TypeScript_, or _SASS_.
+
+### JS / TS
+
 When setting up a new project, remember to edit the `tsconfig.json`/`jsconfig.json` file, and add `"baseUrl": "src"` to `compilerOptions`, like so:
 
 ```tsx
@@ -68,6 +72,20 @@ Instead of
 
 ```tsx
 import Header from "../../../../../../components/Header/Header";
+```
+
+### SASS
+
+In order to be able to do the same with your _SASS_ imports, you need to add the following to your `.env` file.
+
+```bash
+SASS_PATH=src
+```
+
+Then you'll be able to import other SASS files like so.
+
+```sass
+@import "app/styles/variables";
 ```
 
 ## TypeScript Style Guide
