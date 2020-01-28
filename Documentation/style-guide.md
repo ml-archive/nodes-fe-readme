@@ -100,7 +100,7 @@ SASS_PATH=src
 
 Then you'll be able to import other SASS files like so.
 
-```sass
+```scss
 @import "app/styles/variables";
 ```
 
