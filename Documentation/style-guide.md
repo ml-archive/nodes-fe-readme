@@ -48,7 +48,7 @@ export default UserProfile;
 
 ## Importing
 
-In order to have our code be much cleaner, more maintainable, and generally easier to write, we want to use absolute imports. Whether it be for our _JavaScript_ / _TypeScript_, or _SASS_.
+In order to have our code be much cleaner, more maintainable, and generally easier to write, we want to use absolute imports when trying to import files that are not siblings or children. Whether it be for our _JavaScript_ / _TypeScript_, or _SASS_. Basically that means whenever we would write `../` to import a file, we use absolute imports instead.
 
 ### JS / TS
 
@@ -72,6 +72,19 @@ Instead of
 
 ```tsx
 import Header from "../../../../../../components/Header/Header";
+```
+
+#### Exceptions (Siblings and Children)
+
+As explained above, we wan to use relative imports when it comes to importing sibling files, or children. For example.
+
+```tsx
+import styles from "./Header.module.scss";
+```
+Or
+
+```tsx
+import Calender from "./components/Calender/Calender";
 ```
 
 ### SASS
