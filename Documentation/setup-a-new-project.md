@@ -9,7 +9,7 @@ Depending on which project you are starting on you can follow these instructions
 For new SPA React JS projects we use [Create React App](https://github.com/facebook/create-react-app) so we have a minimum of configurations.
 
 ```console
-yarn create react-app my-app --typescript
+yarn create react-app my-app --template typescript
 ```
 
 > We use the TypeScript flag to allow the app to support TS out-of-the-box
