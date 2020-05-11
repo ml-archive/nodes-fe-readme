@@ -24,10 +24,10 @@ Use US English spelling to be consistent with the other dev teams.
 Every TS file should always contain inline documentation, we follow a combination of [ESDoc](https://esdoc.org/manual/tags.html) and [JSDoc](http://usejsdoc.org/). This makes it easy for every developer to see what the purpose of the file is. As an example see this simple class component:
 
 ```tsx
-import React, { Component } from "react";
+import React, { memo } from "react";
 import styles from "./Header.module.scss";
 
-interface Props = {
+interface UserProfileProps = {
   /** Full name of the user. */
   name: string
 };
@@ -35,18 +35,15 @@ interface Props = {
 /**
  * A component to show User details
  */
-class UserProfile extends Component<Props> {
-  render() {
-    const { name } = this.props;
-    return (
-      <div className={styles.container}>
-        {name}
-      </div>
-    )
-  }
-}
+const UserProfile = ({ name }: UserProfileProps) => {
+  return (
+    <div className={styles.container}>
+      {name}
+    </div>
+  )
+};
 
-export default UserProfile;
+export default memo(UserProfile);
 ```
 
 ## Importing
@@ -68,12 +65,10 @@ When setting up a new project, remember to edit the `tsconfig.json`/`jsconfig.js
 This allows us to import modules in a much cleaner way, using absolute paths instead of relative paths.
 
 ```tsx
+// GOOD
 import Header from "app/components/Header/Header";
-```
 
-Instead of
-
-```tsx
+// BAD
 import Header from "../../../../../../components/Header/Header";
 ```
 
@@ -101,7 +96,11 @@ SASS_PATH=src
 Then you'll be able to import other SASS files like so.
 
 ```scss
+// GOOD
 @import "app/styles/variables";
+
+// BAD
+@import "../../../../../styles/variables";
 ```
 
 ## TypeScript Style Guide
@@ -116,7 +115,7 @@ To a large extent we are followig [Airbnb's React Style Guide](https://github.co
 
 - **No index**: Do not name any files `index.tsx` except the root file, as it will make it difficult to perform a search for the file and the tabs in the IDE will say index.tsx, so it can be difficult to quickly locate which tab you want to edit.
 
-- **Component Naming**:
+- **Component/Function Naming**:
   - PascalCase for all components
   - camelCase for helper classes, configurations, globals, etc.
 
@@ -126,10 +125,10 @@ For React JS project we use [SASS](https://sass-lang.com/) as it allows us to sp
 
 We use [CSS Modules](https://github.com/css-modules/css-modules), so it is not necessary to define unique class names between components as all class names will automatically be made unique when injected into the DOM. However, when creating components, we should still try to be consistent, descriptive, and explicit in the naming so for example:
 
-```jsx
+```tsx
 <div className={styles.container}>
-  <div className={styles.card}></div>
-  <button className={cx(styles.button, { styles.buttonActive: isActive })}></button>
+  <div className={styles.card}>{content}</div>
+  <button className={cx(styles.button, { [styles.buttonActive]: isActive })}>{buttonLabel}</button>
 </div>
 ```
 
@@ -149,12 +148,12 @@ This component is stateless and simply just rendering a title. The comments star
 TODO: Write about why we export named function/class instead of default
 
 ```tsx
-import React, { Component } from "react";
+import React, { memo } from "react";
 // ONLY FOR EXAMPLE: import the .scss file, not the .css
 import styles from "./Header.module.scss";
 
 // ONLY FOR EXAMPLE: define the properties and their types
-interface Props = {
+interface HeaderProps = {
   /** Title of page. */
   title: string,
   /** The Sub Title of page. */
@@ -164,36 +163,27 @@ interface Props = {
 /**
  * The Header of a page
  */
-// ONLY FOR EXAMPLE: Always use class extends Component
-// because then you can easily add internal states if necessary
-class Header extends Component<Props> {
-  render() {
-    // ONLY FOR EXAMPLE: Destructuring the properties
-    // or state in the beginning
-    // of the render makes it clear which props/states are
-    // being used in the layout, and it simplifies the
-    // references as there is no need to write
-    // `this.props` every time a props/state is used.
-    const { title, subTitle } = this.props;
-    return (
-      <div className={styles.container}>
-        <h1>
-          {title}
-        </h1>
-        <h2>
-          {subTitle}
-        </h2>
-      </div>
-    )
-  }
-}
+// ONLY FOR EXAMPLE: 
+// - Always use functional component
+// - Wrap in `memo()` which works as PureComponent, 
+//   to make sure it only re-renders if the props change.
+// - Destructuring the props immediately, so you don't have to write `props.title`
+const Header = memo(({ title, subtitle }: HeaderProps) => {
+  return (
+    <div className={styles.container}>
+      <h1>{title}</h1>
+      <h2>{subTitle}</h2>
+    </div>
+  )
+});
 
 export { Header };
 ```
 
-## Example of Redux React Component
+## Example of Redux React Component (OLD)
 
 This component is linked to Redux and updates automatically when the Redux store states are changed.
+> TODO: update this with new redux hooks example
 
 ```tsx
 import React, { Component } from "react";
